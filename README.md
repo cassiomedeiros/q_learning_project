@@ -21,7 +21,7 @@
     pip install -r .\requirements.txt
 ```
 
-5. Realizar o build do pojeto.
+5. Realizar o build do projeto.
  ```
     python setup.py bdist_wheel
 ```
@@ -39,4 +39,4 @@
 
 ## Observações
 
-Ao realizar o teste, é criada uma imagem na pasta "report" com o resultado da execução algorítimo. A imagem apresenta uma relação de episódios x passos para alcançar o objetivo.
+Ao realizar o teste, é criada uma imagem na pasta "report" com o resultado da execução do algorítimo. A imagem apresenta uma relação de episódios x passos para alcançar o objetivo.
