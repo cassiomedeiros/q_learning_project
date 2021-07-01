@@ -1,6 +1,7 @@
 import numpy as np
 from typing import Tuple, List, Dict
 from qlearning.estado import Estado
+import time
 
 class Agente:
     
@@ -100,6 +101,7 @@ class Agente:
         episodio = 0
         passos = 0
         self.agarrou_objeto = False
+        start = time.time()
         while episodio < episodios:
             if self.agarrou_objeto and self.estado.entregou_objeto:
                 self._propagar_recompensa()
@@ -121,3 +123,6 @@ class Agente:
                     print(f"{msg} próxima posição em {self.estado.estado}.")
                 self.entregou = self.estado.entregou_objeto
                 passos += 1
+        end = time.time()
+
+        print(f"Tempo de processamento: {int(end-start)} segundos")
